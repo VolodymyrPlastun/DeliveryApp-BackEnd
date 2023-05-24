@@ -13,7 +13,6 @@ const router = express.Router();
 
 // router.post("/signin", validation(joiLoginSchema), wrapper(signIn));
 
-// router.get("/signout", auth, wrapper(signOut));
 
 router.get("/", getProducts);
 router.post("/order", addOrder);
