@@ -8,22 +8,15 @@ const AddOrder = async (req, res, next) => {
       // const { _id } = req.user;
       const user = await User.findOne({email});
   if (user) {
-    await NewProduct.create({...selectedProducts, owner: user._id});
+    await NewProduct.create(selectedProducts.map(product => ({ ...product, owner: user._id })));
     // throw new Conflict("Email in use");
   }
       // Создание нового пользователя
     const newUser = await User.create(userData);
-    // await user.save();
-    await NewProduct.create({...selectedProducts, owner: newUser._id});
-    // Связывание выбранных товаров с пользователем
-    // const result = await Promise.all(selectedProducts.map(async (productId) => {
-    //   const product = await Product.findById(productId);
-    //   user.products.push(product);
-    // }));
-    // user.products.push(selectedProducts);
 
-    // Сохранение изменений пользователя
-    // await user.save();
+    await NewProduct.create(selectedProducts.map(product => ({ ...product, owner: newUser._id })));
+
+
       res.status(201).json({
         status: 'success',
         code: 201, 

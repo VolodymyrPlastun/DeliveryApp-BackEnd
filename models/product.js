@@ -52,7 +52,7 @@ const productSchema = Schema({
 //     password: Joi.string().required(),
 //   })
   const Product = model('product', productSchema);
-  const Sushi = model('sushi',productSchema, 'sushi');
+  const Sushi = model('sushi', productSchema, 'sushi');
   const NewProduct = model('userProduct', productSchema);
 
   module.exports = {
