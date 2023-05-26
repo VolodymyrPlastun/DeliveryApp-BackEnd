@@ -11,7 +11,7 @@ const userSchema = Schema({
         required: [true, 'Set email for user'],
       },
       phone: {
-        type: Number,
+        type: String,
         required: [true, 'Set phone for user'],
       },
       address: {
