@@ -1,9 +1,10 @@
 const {User, joiUserSchema} = require('./user');
-const {Product, NewProduct} = require('./product');
+const {Product, NewProduct, Sushi} = require('./product');
 
 module.exports = {
     User,
     joiUserSchema,
     Product,
-    NewProduct
+    NewProduct,
+    Sushi
 };

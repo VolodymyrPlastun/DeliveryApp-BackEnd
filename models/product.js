@@ -51,12 +51,12 @@ const productSchema = Schema({
 //     email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required(),
 //     password: Joi.string().required(),
 //   })
-const Product = model('product', productSchema);
+  const Product = model('product', productSchema);
+  const Sushi = model('sushi',productSchema, 'sushi');
   const NewProduct = model('userProduct', productSchema);
 
   module.exports = {
     Product,
-    NewProduct
-    // joiUserSchema,
-    // joiLoginSchema,
+    NewProduct,
+    Sushi
   };

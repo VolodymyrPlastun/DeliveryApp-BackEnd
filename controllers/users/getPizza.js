@@ -18,10 +18,10 @@
 // }
 const {Product} = require('../../models');
 
-const getProducts = async (req, res, next) => {
+const getPizza = async (req, res, next) => {
     try {
       const products = await Product.find({});
-      console.log(products);
+      // console.log(products);
       res.json({
         status: 'success',
         code: 200,
@@ -34,4 +34,4 @@ const getProducts = async (req, res, next) => {
   
   }
 
-  module.exports = getProducts;
+  module.exports = getPizza;

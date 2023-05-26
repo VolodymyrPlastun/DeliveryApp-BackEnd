@@ -1,5 +1,5 @@
 const express = require('express')
-const {getProducts, addOrder} = require('../../controllers');
+const {getPizza, addOrder, getSushi} = require('../../controllers');
 // const {validation, wrapper, auth} = require('../../middlewares');
 
 // const {
@@ -14,7 +14,10 @@ const router = express.Router();
 // router.post("/signin", validation(joiLoginSchema), wrapper(signIn));
 
 
-router.get("/", getProducts);
+router.get("/", getPizza);
+
+router.get("/sushi", getSushi);
+
 router.post("/order", addOrder);
 
 module.exports = router;
