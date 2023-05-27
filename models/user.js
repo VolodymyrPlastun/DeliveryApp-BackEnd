@@ -1,5 +1,4 @@
 const {Schema, model} = require('mongoose');
-// const Joi = require('joi');
 
 const userSchema = Schema({
     name: {
@@ -9,6 +8,7 @@ const userSchema = Schema({
       email: {
         type: String,
         required: [true, 'Set email for user'],
+        unique: [true, 'Email is already in use'],
       },
       phone: {
         type: String,
@@ -20,16 +20,8 @@ const userSchema = Schema({
       },
 }, {versionKey: false, timestamps: true})
 
-// const joiUserSchema = Joi.object({
-//     name: Joi.string().required(),
-//     email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required(),
-//     phone: Joi.number().required(),
-//     address: Joi.string()
-//   });
-
   const User = model('user', userSchema);
 
   module.exports = {
     User,
-    // joiUserSchema,
   };

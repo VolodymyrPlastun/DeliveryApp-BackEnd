@@ -1,23 +1,14 @@
 const express = require('express')
 const {getPizza, addOrder, getSushi} = require('../../controllers');
-// const {validation, wrapper, auth} = require('../../middlewares');
-
-// const {
-//   joiLoginSchema,
-//   joiUserSchema,
-// } = require("../../models");
+const { wrapper} = require('../../middlewares');
 
 const router = express.Router();
 
-// router.post("/signup", validation(joiUserSchema), wrapper(signUp));
 
-// router.post("/signin", validation(joiLoginSchema), wrapper(signIn));
+router.get("/", wrapper(getPizza));
 
+router.get("/sushi", wrapper(getSushi));
 
-router.get("/", getPizza);
-
-router.get("/sushi", getSushi);
-
-router.post("/order", addOrder);
+router.post("/order", wrapper(addOrder));
 
 module.exports = router;

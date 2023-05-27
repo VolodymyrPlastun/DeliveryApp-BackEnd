@@ -1,12 +1,8 @@
-// const signUp = require('./users/signup');
-// const signIn = require('./users/signin');
-// const signOut = require('./users/signout');
-const getPizza = require('./users/getPizza');
-const addOrder = require('./users/addOrder');
-const getSushi = require('./users/getSushi');
+const getPizza = require('./products/getPizza');
+const addOrder = require('./products/addOrder');
+const getSushi = require('./products/getSushi');
 
 module.exports = {
-    // signUp,
     getSushi,
     addOrder,
     getPizza,

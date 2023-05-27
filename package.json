@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "ElifTech-Delivery-app",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -28,13 +28,13 @@
     "eslint-plugin-promise": "5.2.0",
     "nodemon": "2.0.15"
   },
-  "description": "Backend Team Project - Group n.43, GO-IT",
+  "description": "Backend Project - for ElifTech-Delivery-app",
   "main": ".eslintrc.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/goitacademy/nodejs-homework-template.git"
   },
-  "author": "Team 1 - GO-IT-43",
+  "author": "Volodymyr Plastun",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/goitacademy/nodejs-homework-template/issues"
