@@ -8,7 +8,6 @@ const userSchema = Schema({
       email: {
         type: String,
         required: [true, 'Set email for user'],
-        unique: [true, 'Email is already in use'],
       },
       phone: {
         type: String,
